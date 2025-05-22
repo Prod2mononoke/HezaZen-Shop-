@@ -1,8 +1,16 @@
-function login() {
-  const username = document.getElementById("username").value;
-  document.getElementById("message").innerText = "Welcome, " + username + "!";
-}
+const inventory = [];
 
 function buyItem(itemName) {
-  document.getElementById("message").innerText = "You bought: " + itemName + "!";
+  inventory.push(itemName);
+  updateInventoryUI();
+}
+
+function updateInventoryUI() {
+  const list = document.getElementById("inventoryList");
+  list.innerHTML = "";
+  inventory.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    list.appendChild(li);
+  });
 }
