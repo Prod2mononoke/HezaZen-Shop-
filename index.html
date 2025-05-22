@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grow a Garden Shop</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Grow a Garden - Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>Grow a Garden - Item Shop</h1>
-    <div class="login">
-      <input type="text" id="username" placeholder="Username" />
-      <input type="password" id="password" placeholder="Password" />
-      <button onclick="login()">Login</button>
+
+    <div class="shop-item">
+      <h2>BIG MANGO RNG</h2>
+      <p>Super rare farming item. Only appears every 0.01%!</p>
+      <button onclick="buyItem('BIG MANGO RNG')">Buy</button>
     </div>
 
-    <div class="shop">
-      <h2>Available Items</h2>
-      <div class="item">
-        <h3>BIG MANGO RNG</h3>
-        <p>Super rare farming item!</p>
-        <button onclick="buyItem('BIG MANGO RNG')">Buy</button>
-      </div>
+    <div class="inventory">
+      <h3>Your Items:</h3>
+      <ul id="inventoryList"></ul>
     </div>
-
-    <div id="message"></div>
   </div>
 
   <script src="script.js"></script>
